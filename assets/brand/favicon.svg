@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <linearGradient id="favGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C17B"/>
+      <stop offset="50%" stop-color="#C59B4E"/>
+      <stop offset="100%" stop-color="#E5C17B"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#0D0D11"/>
+  <circle cx="32" cy="32" r="24" stroke="url(#favGold)" stroke-width="2" fill="none"/>
+  <!-- Star accents -->
+  <path d="M 6 22 L 7.5 25 L 10.5 25.5 L 8 27.5 L 9 30.5 L 6 29 L 3 30.5 L 4 27.5 L 1.5 25.5 L 4.5 25 Z" fill="#E5C17B" transform="scale(0.7) translate(14, 18)"/>
+  <text x="32" y="40" text-anchor="middle" font-family="'Playfair Display', serif" font-weight="700" font-style="italic" font-size="24" fill="#FFFFFF">Sm</text>
+</svg>

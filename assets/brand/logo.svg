@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 70" width="300" height="70" fill="none">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E5C17B"/>
+      <stop offset="50%" stop-color="#C59B4E"/>
+      <stop offset="100%" stop-color="#E5C17B"/>
+    </linearGradient>
+  </defs>
+  <!-- Monogram Circle -->
+  <g transform="translate(10, 5)">
+    <circle cx="30" cy="30" r="28" stroke="url(#goldGrad)" stroke-width="1.8" fill="none" opacity="0.9"/>
+    <!-- Small star decorative accents -->
+    <path d="M 6 22 L 7.5 25 L 10.5 25.5 L 8 27.5 L 9 30.5 L 6 29 L 3 30.5 L 4 27.5 L 1.5 25.5 L 4.5 25 Z" fill="#C59B4E" transform="scale(0.8) translate(4, 18)"/>
+    <path d="M 6 22 L 7.5 25 L 10.5 25.5 L 8 27.5 L 9 30.5 L 6 29 L 3 30.5 L 4 27.5 L 1.5 25.5 L 4.5 25 Z" fill="#C59B4E" transform="scale(0.55) translate(4, 40)"/>
+    <!-- Script Sm -->
+    <text x="28" y="38" text-anchor="middle" font-family="'Playfair Display', 'Cormorant Garamond', 'Georgia', serif" font-weight="700" font-style="italic" font-size="28" fill="#FFFFFF" letter-spacing="-1">Sm</text>
+  </g>
+  <!-- Brand Text -->
+  <g transform="translate(78, 12)">
+    <text x="0" y="24" font-family="'Cinzel', 'Outfit', 'Montserrat', -apple-system, sans-serif" font-weight="700" font-size="22" letter-spacing="4" fill="#FFFFFF">SHIV MENS</text>
+    <text x="2" y="42" font-family="'Outfit', 'Inter', -apple-system, sans-serif" font-weight="500" font-size="9" letter-spacing="3.5" fill="#C59B4E">PREMIUM MEN'S COLLECTION</text>
+  </g>
+</svg>

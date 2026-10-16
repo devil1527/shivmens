@@ -1,0 +1,148 @@
+/* ==========================================================================
+   SHIV MENS — Responsive Layout & Breakpoints
+   ========================================================================== */
+
+@media (max-width: 1199px) {
+  .spread-layout {
+    gap: 48px;
+  }
+
+  .catalog-masonry {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .social-feed-strip {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-columns-row {
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 991px) {
+  .main-nav,
+  .header-wa-btn {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: flex;
+  }
+
+  .spread-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .categories-masonry {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .catalog-masonry {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .store-visit-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-columns-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .lightbox-container {
+    grid-template-columns: 1fr;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+
+  .lightbox-media {
+    max-height: 380px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --header-height: 70px;
+  }
+
+  .brand-name {
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+  }
+
+  .hero-main-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .hero-actions-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero-actions-row .btn {
+    width: 100%;
+  }
+
+  .categories-masonry {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog-masonry {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+
+  .social-feed-strip {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .store-info-box,
+  .wa-builder-box {
+    padding: 28px 20px;
+  }
+
+  .footer-columns-row {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .whatsapp-float-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .whatsapp-float-btn svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-video-elem {
+    display: none;
+  }
+}
