@@ -4,7 +4,20 @@ A complete, high-end, production-ready static website built for **SHIV MENS** (S
 
 ---
 
-## 1. Quick Start & Local Preview
+## 1. Design System & Theme: Light Royal Blue
+
+Following client art-direction, the website features a **crisp light luxury theme with deep royal blue and vibrant sapphire accents**, tailored to prestigious menswear aesthetics:
+
+- **Background Canvas**: Ultra-clean `#F8FAFC` off-white with `#FFFFFF` elevated cards and `#F1F5F9` surfaces.
+- **Brand Navy / Royal Blue**: `#0A192F` and `#0F2C59` — deep, classic menswear luxury (Ralph Lauren / Brooks Brothers tone).
+- **Vibrant Accent Blue**: `#2563EB` / `#1D4ED8` — modern sapphire for active filters, navigation indicators, and primary CTAs.
+- **Ice-Blue Tints**: `#EFF6FF` / `#DBEAFE` for category tags, pill highlights, and hover cards.
+- **Typography**: `Cinzel` (authoritative serif displays), `Outfit` (modern uppercase labels), and `Inter` (refined body reading).
+- **Interactive Lightbox Quick View**: Modal preview for full clothing details with instant WhatsApp inquiry pre-filled with the exact garment name.
+
+---
+
+## 2. Quick Start & Local Preview
 
 This is a **pure static website** built with HTML5, CSS3, and Vanilla JavaScript. It requires no database, backend server, node build steps, or external build dependencies.
 
@@ -25,33 +38,33 @@ Then open [http://localhost:8085](http://localhost:8085) in your web browser.
 
 ---
 
-## 2. Project Directory Structure
+## 3. Project Directory Structure
 
 ```
 shivmens/
-├── index.html              # Homepage (Hero Video, Brand Intro, Categories, Preview, Social Feed)
-├── about.html              # Brand Story, Philosophy, Store Atelier & Pillars
-├── collection.html         # Interactive Catalog (Filtering by Category & Lightbox QuickView)
+├── index.html              # Homepage (Hero Video, Signature Line, 6 Wardrobe Edits, Featured Pieces, Instagram Strip)
+├── about.html              # Brand Story, Philosophy, Store Atelier & Live Video Demo
+├── collection.html         # Interactive Catalog (Filterable by 5 Departments with 33 Real Pieces & QuickView Modal)
 ├── contact.html            # Verified Store Details, Live WhatsApp Builder & Location Map
 ├── 404.html                # Custom 404 Error Page
 ├── README.md               # Documentation & Asset Inventory
 ├── css/
-│   ├── style.css           # Core Design System, Luxury Color Palette & Typography
-│   └── responsive.css      # Full Mobile, Tablet & Desktop Media Queries + Reduced Motion
+│   ├── style.css           # Light Royal Blue Design System, Typography & Shadows
+│   └── responsive.css      # Full Mobile, Tablet & Desktop Media Queries
 ├── js/
 │   ├── config.js           # Centralized Business Data (Phone, Address, WhatsApp, Social URLs)
 │   ├── main.js             # Sticky Nav, Mobile Drawer, Video Controls & Dynamic Links
 │   └── collection.js       # Filter Engine, Lightbox Modal & WhatsApp Message Builder
 └── assets/
-    ├── brand/              # Logos (SVG), Monogram Favicon, Official Brand Poster
+    ├── brand/              # Logos (SVG), Monogram Favicon (SVG), Official Brand Poster
     ├── icons/              # Self-contained SVG Icons (WhatsApp, Instagram, Facebook, etc.)
     ├── images/
-    │   ├── hero/           # Hero Background Poster & Model Featured Cuts
-    │   ├── collection/     # Denim, Linen Sets, Shirts, Cargo Trousers & Kurtas
+    │   ├── collection/     # 33 Real Boutique Products (Kurtas, Shirts, T-Shirts, Denim, Cargos)
     │   ├── editorial/      # High-Resolution Flat Lays & Catalog Shoot Posters
+    │   ├── hero/           # Hero Background Poster & Model Featured Cuts
     │   └── social/         # Instagram Lookbook Feed Grid
     └── videos/
-        ├── hero-bg.mp4     # Web-Optimized Lightweight Background Loop (crf 26)
+        ├── hero-bg.mp4     # Web-Optimized Background Loop
         ├── denim-fit-reel.mp4
         ├── cargo-fit-reel.mp4
         ├── ethnic-kurta-reel.mp4
@@ -61,94 +74,56 @@ shivmens/
 
 ---
 
-## 3. Centralized Business Configuration
+## 4. Complete Apparel Inventory (33 Real Boutique Items)
 
-All contact numbers, WhatsApp target numbers, social media links, store addresses, and UPI IDs are maintained in **`js/config.js`**. 
+All media shared by the boutique—including the 4 video walkthroughs and high-res photography—have been processed, cropped, and organized into 33 dedicated apparel pieces:
 
-To update the phone number or links across all pages, edit `js/config.js`:
-
-```javascript
-const SHIV_CONFIG = {
-  brand: {
-    name: "SHIV MENS",
-    legalName: "Shiv Mens",
-    tagline: "Style That Speaks For You",
-    description: "Curated men's fashion in Nagpur..."
-  },
-  contact: {
-    primaryPhone: "+91 88300 12212",
-    secondaryPhone: "+91 94228 08260",
-    phoneRawPrimary: "8830012212",
-    whatsappNumber: "918830012212", // International format for wa.me
-    whatsappDefaultMessage: "Hi SHIV MENS, I would like to know more about your collection.",
-    address: {
-      landmark: "Sai Vasanshah Square",
-      area: "Jaripatka",
-      city: "Nagpur",
-      state: "Maharashtra",
-      pincode: "440014",
-      country: "India"
-    }
-  },
-  social: {
-    instagram: {
-      handle: "@shivmens_nagpur",
-      url: "https://www.instagram.com/shivmens_nagpur"
-    },
-    facebook: {
-      url: "https://www.facebook.com/shivmens_nagpur"
-    }
-  },
-  payment: {
-    upiId: "mukeshkngp-1@oksbi",
-    payeeName: "Mukesh Kukreja / Shiv Mens"
-  }
-};
-```
-
----
-
-## 4. Source Asset Inventory & Usage Report
-
-All brand media supplied in the original ZIP and WhatsApp files were inspected, organized, and converted for production web use:
-
-| Source File | Processed Web Asset | Section Where Used | Description / Details |
+| Department | Product Title | Source Media | Image Path |
 |---|---|---|---|
-| `WhatsApp Image ... 4.46.08 PM.jpeg` | `assets/brand/brand-poster.jpg`, `assets/brand/logo.svg` | Header, Brand Monogram, Avatar, Footer | Official brand poster with "Sm" crest, Jaripatka address & phone numbers. |
-| `WhatsApp Image ... 4.42.36 PM (1).jpeg` | `assets/images/hero/hero-model-denim.jpg`, `assets/images/editorial/denim-poster-classic.jpg` | Hero Intro, About Gallery, Collection | Bluesmith Denim model shoot (white collared shirt, washed denim front/back). |
-| `WhatsApp Image ... 4.42.36 PM.jpeg` | `assets/images/hero/hero-model-light.jpg`, `assets/images/editorial/denim-poster-light.jpg` | Collection Catalog, Lookbook | Bluesmith Denim model shoot (white tee, light blue wash denim front/back). |
-| `WhatsApp Image ... 4.42.35 PM.jpeg` | `assets/images/editorial/linen-collection-flatlay.jpg`, `assets/images/collection/linen-co-ord-sets.jpg` | Editorial Banner ("OWN YOUR LOOK"), Collection | Luxury flat lay of "COS-123 Linen-Look Textile" shirts & trousers in 3 colors. |
-| `WhatsApp Image ... 4.46.32 PM.jpeg` | 6 cropped denim products: `denim-khaki-chino.jpg`, `denim-crest-blue.jpg`, `denim-ab-black.jpg`, etc. | Collection Page Catalog Grid | 6 individual pairs of jeans held up in store with organized garment racks behind. |
-| `WhatsApp Image ... 4.41.04 PM.jpeg` | `assets/images/collection/streetwear-shark-tshirt.jpg` | Collection Page (Streetwear) | Cookyss Dark Grey Shark Graphic T-Shirt. |
-| `WhatsApp Image ... 4.41.51 PM.jpeg` | `assets/images/collection/premium-textured-shirt.jpg` | Category Tiles, Collection Page | Cookyss Dark Charcoal Structured Collared Shirt. |
-| `WhatsApp Video ... 4.44.43 PM.mp4` | `assets/videos/hero-bg.mp4`, `denim-fit-reel.mp4` | Hero Section (silent web loop) & About Page | In-store live demonstration of comfort-stretch denim fit at Jaripatka store. |
-| `WhatsApp Video ... 4.43.31 PM.mp4` | `assets/videos/cargo-fit-reel.mp4`, `cargo-utility-white.jpg` | Category Card, Collection Catalog | In-store showcase of white multi-pocket utility cargo trousers. |
-| `WhatsApp Video ... 4.44.08 PM.mp4` | `assets/videos/ethnic-kurta-reel.mp4`, `ethnic-embroidered-black-kurta.jpg` | Category Card, Collection Catalog | In-store showcase of black embroidered and maroon festive kurta sets. |
-| `WhatsApp Video ... 4.42.36 PM.mp4` | `assets/videos/street-display.mp4`, `store-mannequins-casuals.jpg` | Social Grid, Collection Catalog | Exterior storefront display of mannequins dressed in casual attire. |
+| **Festive Kurtas** | Royal Maroon Silk Kurta with Stole | WhatsApp Video 4.44.08 PM (sec 14) | `assets/images/collection/ethnic-festive-kurta-stole.jpg` |
+| **Festive Kurtas** | White Royal Embroidered Kurta Set | WhatsApp Video 4.44.08 PM (sec 6) | `assets/images/collection/ethnic-embroidered-white-kurta.jpg` |
+| **Festive Kurtas** | Vibrant Haldi Yellow Festive Kurta | WhatsApp Video 4.44.08 PM (sec 18) | `assets/images/collection/ethnic-haldi-yellow-kurta.jpg` |
+| **Festive Kurtas** | Olive Green Botanical Embroidered Kurta | WhatsApp Video 4.44.08 PM (sec 24) | `assets/images/collection/ethnic-embroidered-olive-kurta.jpg` |
+| **Festive Kurtas** | Lavender Pastel Embroidered Kurta | WhatsApp Video 4.44.08 PM (sec 30) | `assets/images/collection/ethnic-lavender-kurta.jpg` |
+| **Festive Kurtas** | Wine Magenta Sequin Festive Kurta | WhatsApp Video 4.44.08 PM (sec 36) | `assets/images/collection/ethnic-wine-sequin-kurta.jpg` |
+| **Festive Kurtas** | Blush Peach Resham Embroidered Kurta | WhatsApp Video 4.44.08 PM (sec 43) | `assets/images/collection/ethnic-peach-embroidered-kurta.jpg` |
+| **Festive Kurtas** | Royal Blue Heritage Printed Kurta | WhatsApp Video 4.44.08 PM (sec 48) | `assets/images/collection/ethnic-royal-blue-print-kurta.jpg` |
+| **Festive Kurtas** | Pastel Floral Motif Designer Kurta | WhatsApp Video 4.44.08 PM (sec 48) | `assets/images/collection/ethnic-floral-festival-kurta.jpg` |
+| **Festive Kurtas** | Turquoise Sky Blue Silk Kurta | WhatsApp Video 4.44.08 PM (sec 43) | `assets/images/collection/ethnic-turquoise-silk-kurta.jpg` |
+| **Festive Kurtas** | Black Embroidered Kurta Set | Store Shoot / Video Frame | `assets/images/collection/ethnic-embroidered-black-kurta.jpg` |
+| **Shirts & Co-Ords** | Cookyss Charcoal Structured Shirt | WhatsApp Image 4.41.51 PM | `assets/images/collection/premium-textured-shirt.jpg` |
+| **Shirts & Co-Ords** | Black & Charcoal Striped Casual Shirt | WhatsApp Video 4.44.43 PM (sec 9) | `assets/images/collection/shirt-charcoal-striped-casual.jpg` |
+| **Shirts & Co-Ords** | Sand Textured Linen Co-Ord Set | WhatsApp Image 4.42.35 PM | `assets/images/collection/linen-sand-coord-shirt.jpg` |
+| **Shirts & Co-Ords** | Earth Brown Mocha Linen Shirt | WhatsApp Image 4.42.35 PM | `assets/images/collection/linen-earth-brown-shirt.jpg` |
+| **Shirts & Co-Ords** | Olive Moss Green Linen Shirt | WhatsApp Image 4.42.35 PM | `assets/images/collection/linen-olive-green-shirt.jpg` |
+| **Shirts & Co-Ords** | Complete 3-Piece Linen Co-Ord Edit | WhatsApp Image 4.42.35 PM | `assets/images/collection/linen-co-ord-sets.jpg` |
+| **T-Shirts & Streetwear** | Shark Graphic Heavyweight Streetwear Tee | WhatsApp Image 4.41.04 PM | `assets/images/collection/streetwear-shark-tshirt.jpg` |
+| **T-Shirts & Streetwear** | "DECIDE" Distressed Acid-Wash Tee | WhatsApp Video 4.42.36 PM (sec 0) | `assets/images/collection/streetwear-decide-acidwash-tee.jpg` |
+| **T-Shirts & Streetwear** | "CREW 38" Neutral Sand Graphic Tee | WhatsApp Video 4.42.36 PM (sec 9) | `assets/images/collection/streetwear-crew38-beige-tee.jpg` |
+| **T-Shirts & Streetwear** | Burgundy Stag Line-Art Streetwear Tee | WhatsApp Video 4.42.36 PM (sec 9) | `assets/images/collection/streetwear-burgundy-stag-tee.jpg` |
+| **T-Shirts & Streetwear** | Olive Green Horse Line-Art Graphic Tee | WhatsApp Video 4.42.36 PM (sec 6) | `assets/images/collection/streetwear-olive-horse-tee.jpg` |
+| **T-Shirts & Streetwear** | Donald Duck Lavender Streetwear Tee | WhatsApp Video 4.43.31 PM (sec 12) | `assets/images/collection/streetwear-donald-lavender-tee.jpg` |
+| **Denim & Jeans** | Bluesmith Comfort-Stretch Denim (Front) | WhatsApp Image 4.42.36 PM (1) | `assets/images/collection/denim-classic-front.jpg` |
+| **Denim & Jeans** | Bluesmith Denim (Rear Yoke & Pocket) | WhatsApp Image 4.42.36 PM (1) | `assets/images/collection/denim-classic-back.jpg` |
+| **Denim & Jeans** | Light Wash Streetwear Denim | WhatsApp Image 4.42.36 PM | `assets/images/collection/denim-light-front.jpg` |
+| **Denim & Jeans** | Sand Khaki Chino Denim | WhatsApp Image 4.46.32 PM | `assets/images/collection/denim-khaki-chino.jpg` |
+| **Denim & Jeans** | Indigo Crest Monogram Denim | WhatsApp Image 4.46.32 PM | `assets/images/collection/denim-crest-blue.jpg` |
+| **Denim & Jeans** | AB Raw Black Tailored Denim | WhatsApp Image 4.46.32 PM | `assets/images/collection/denim-ab-black.jpg` |
+| **Denim & Jeans** | Vintage Mid-Blue Washed Denim | WhatsApp Image 4.46.32 PM | `assets/images/collection/denim-washed-redtag.jpg` |
+| **Denim & Jeans** | Deep Indigo Flap-Pocket Designer Denim | WhatsApp Video 4.44.43 PM (sec 18) | `assets/images/collection/denim-flap-pocket-designer.jpg` |
+| **Cargos & Trousers** | White Multi-Pocket Utility Cargo | WhatsApp Video 4.43.31 PM (sec 12) | `assets/images/collection/cargo-utility-white.jpg` |
+| **Cargos & Trousers** | Acid-Wash Grey Denim Cargo Joggers | WhatsApp Video 4.43.31 PM (sec 21) | `assets/images/collection/cargo-acidwash-grey-jogger.jpg` |
 
 ---
 
-## 5. Business Details Verified & Items for Attention
+## 5. Centralized Business Configuration
 
-### Verified Authentic Business Details (Used on Site):
-- **Brand Name**: SHIV MENS (physical store signboard: SHIV MENS)
+Maintained in **`js/config.js`**:
+
+- **Brand Name**: SHIV MENS
 - **Store Location**: Sai Vasanshah Square, Jaripatka, Nagpur, Maharashtra 440014, India
-- **Primary Contact Number**: `+91 88300 12212`
-- **Secondary Contact Number**: `+91 94228 08260`
+- **Primary Phone**: `+91 88300 12212`
+- **Secondary Phone**: `+91 94228 08260`
 - **WhatsApp**: `https://wa.me/918830012212`
 - **Instagram Handle**: `@shivmens_nagpur` (`https://www.instagram.com/shivmens_nagpur`)
 - **Facebook Profile**: `shivmens_nagpur` (`https://www.facebook.com/shivmens_nagpur`)
-
-### Business Items Requiring Owner Attention (If Applicable):
-1. **Domain Registration**: If setting up a custom domain (e.g., `shivmens.com` or `shivmensnagpur.in`), configure DNS records to point to your static hosting provider (e.g. Netlify, Vercel, GitHub Pages, or Hostinger).
-2. **Google Business Profile Verification**: Claim and link your exact Google Business listing for "Shiv Mens Jaripatka" to get a direct review link and verified map pin.
-3. **Email Address**: Currently all inquiries route directly to WhatsApp and phone calls. If you wish to display an official email (e.g. `info@shivmens.com`), simply add it in `js/config.js`.
-
----
-
-## 6. How to Deploy to Static Hosting
-
-### Deploying to Netlify / Vercel / GitHub Pages
-- **Netlify**: Drag and drop the `shivmens` folder directly into [app.netlify.com/drop](https://app.netlify.com/drop).
-- **GitHub Pages**: Push the repository to GitHub and enable GitHub Pages under Settings > Pages (Branch: `main`, Folder: `/root`).
-- **Apache Web Server**: Copy all files to `/var/www/html/` or your virtual host directory.
